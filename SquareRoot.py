@@ -69,7 +69,6 @@ def binomial_division_square_root(z):
     s[1] = r[0] * 100 + z_seg[1]
 
     for i in range(1, len(s)-1):
-
         while True:
             a[i] = a[i] + 1
             if (2 * x * 10 + a[i]) * a[i] > s[i]:
