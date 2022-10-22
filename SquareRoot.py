@@ -39,7 +39,7 @@ print("Interval Shrink method cost time:", (end_time-start_time)*10**3, "ms")
 
 def binomial_division_square_root(z):
 
-    decimal = 6
+    decimal = 15
     z = z * 10 ** ( (decimal+1) * 2)
 
     z_seg_len = len(str(z)) //2 + 1
