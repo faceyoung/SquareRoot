@@ -51,12 +51,10 @@ def binomial_division_square_root(z):
         index = index - 1
     print(z_seg)
 
-
     s = [0] * z_seg_len
     a = [0] * z_seg_len
     r = [0] * z_seg_len
     x = 0
-
     s[0] = z_seg[0]
     while True:
         a[0] = a[0] + 1
