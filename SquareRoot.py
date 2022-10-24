@@ -54,32 +54,19 @@ def binomial_division_square_root(z):
     s = [0] * z_seg_len
     a = [0] * z_seg_len
     r = [0] * z_seg_len
-    x = 0
     s[0] = z_seg[0]
-    while True:
-        a[0] = a[0] + 1
-        if a[0]**2 > s[0]:
-            a[0] = a[0] - 1
-            break
-    print(a[0])
-    x = a[0]
-    r[0] = s[0] - a[0] ** 2
-    s[1] = r[0] * 100 + z_seg[1]
-
-    for i in range(1, len(s)-1):
+    x = 0
+    for i in range(0, len(s)-1):
         while True:
             a[i] = a[i] + 1
-            if (2 * x * 10 + a[i]) * a[i] > s[i]:
+            if (20 * x + a[i]) * a[i] > s[i]:
                 a[i] = a[i] - 1
                 break
         print(a[i])
-        r[i] = s[i] - (2 * x * 10 + a[i]) * a[i]
+        r[i] = s[i] - (20 * x + a[i]) * a[i]
         s[i + 1] = r[i] * 100 + z_seg[i + 1]
         x = x * 10 + a[i]
         print(x)
-
-    x = x / 10**decimal
-    print(x)
 
 start_time = time.time()
 binomial_division_square_root(200)
